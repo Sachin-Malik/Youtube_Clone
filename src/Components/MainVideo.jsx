@@ -18,21 +18,18 @@ const MainVideo = ({selectedVideoID, suggestionVideos, videoSelection}) => {
     const [showAlert, setShowAlert] = useState(true);
 
     useEffect(()=>{
-      console.log(selectedVideoID);
       const getVideoDetail = async() => {
         if(selectedVideoID==='') return;
         const response = await axios.get(`${baseURL}&id=${selectedVideoID}&key=${KEY}`)
         setSelectedVideo(response.data.items[0]);
-        console.log(response.data.items[0]);
       }
       getVideoDetail(selectedVideoID);
     },[selectedVideoID])
 
 
     return (
-        <div className='container-fluid'>
-        <div className='row' style={{ display:'flex'}}>
-            <div className='col-12 col-md-8 px-0 px-md-3'>
+        <div className='videoAndSuggestionWrapper' style={{ display:'flex'}}>
+            <div className='mainVideoPlayer' style={{paddingLeft:'2%'}}>
 
                 <div className='col-12 text-center alert py-2' style={{display:showAlert?'flex':'none'}}>
                     <p style={{margin:'0px'}}>Some Channels might have disabled their content to run in Embeded Mode. If Video Doesn't load Please try a different channel.</p>
@@ -45,8 +42,7 @@ const MainVideo = ({selectedVideoID, suggestionVideos, videoSelection}) => {
                 <MainVideoInfo selectedVideo={selectedVideo}/>
             </div>
 
-
-            <div className='col-12 col-md-4 mt-4 mt-md-0 pr-5'>
+            <div className='suggestionListWrapper'>
                {
                 suggestionVideos.map((video)=>{
                     return (
@@ -59,7 +55,6 @@ const MainVideo = ({selectedVideoID, suggestionVideos, videoSelection}) => {
                }
             
             </div>
-        </div>
         </div>
     )
 }

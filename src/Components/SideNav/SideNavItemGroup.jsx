@@ -6,7 +6,7 @@ const SideNavItemGroup = ({heading=null,items,seperator=false}) => {
         {
             items.map((item)=>{
                 return <div className='itemWrapper'>
-                    <img style={{height:'25px', width:'25px'}} src={item.icon} alt={item.altText} />
+                    <img style={{height:'20px', width:'20px'}} src={item.icon} alt={item.altText} />
                     <span className='d-none d-md-block' style={{marginLeft:'20px',letterSpacing:'0px'}}>{item.name}</span>
                 </div>
             })

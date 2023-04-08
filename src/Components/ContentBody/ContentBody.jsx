@@ -64,13 +64,11 @@ const ContentBody = () => {
         />
       </div>
       ) :  (  
-        <div className='px-md-5'>
           <MainVideo 
             selectedVideoID={selectedVideoId} 
             suggestionVideos={videos}
             videoSelection={handleVideoSelection}
           />
-        </div> 
       )
       }
       </>

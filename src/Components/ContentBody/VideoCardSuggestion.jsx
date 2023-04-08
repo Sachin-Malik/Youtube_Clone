@@ -4,15 +4,16 @@ const VideoCardSuggestion = ({video, videoSelection}) => {
 
     const videoStyle = {
         width:window.innerWidth<700?window.innerWidth-40:'250px',
+        height:window.innerWidth<700?'150px':'130px',
     }
 
    
     return (
-        <div onClick={()=>{videoSelection(video)}} className='videoSuggestionCard p-0 pr-md-5'>
+        <div onClick={()=>{videoSelection(video)}} className='videoSuggestionCard'>
             <div className='text-center align-self-center '>
                 <img 
                     src={video.snippet.thumbnails.medium.url} 
-                    style={{height:'130px', ...videoStyle, borderRadius:'15px', objectFit:'cover'}}  
+                    style={{ ...videoStyle, borderRadius:'15px', objectFit:'cover'}}  
                 />
             </div>
             <div className='ml-0 ml-md-2' style={{ padding:'10px',paddingBottom:'0px'}}>

@@ -12,13 +12,13 @@
 
 .tag{
     display:inline-block;
-    margin:10px;
-    padding:8px 10px;
+    margin:4px;
+    font-size: 14px;
+    padding:4px 12px;
     background-color: rgba(219, 219, 219, 0.4);
     border-radius: 10px;
     font-weight: 400;
     font-family: 'Roboto' , 'Courier New', Courier, monospace;
-
     white-space: nowrap;
 }
 .tag:hover{

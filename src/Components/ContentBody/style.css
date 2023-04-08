@@ -36,39 +36,61 @@
 .video__title{
     display: flex;
     margin-top:15px;
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
     color:black;
+    font-family: 'Roboto' , 'Courier New', Courier, monospace;
+
 }
 
 .videoSuggestionCard{
     display: flex;
     cursor: pointer;
     margin-bottom:20px;
+    padding:0px 5%;
+}
+
+.suggestionListWrapper{
+    width: 35%;
+}
+
+.mainVideoPlayer{
+    width: 65%;
+}
+
+@media screen and (max-width:1100px) {
+    .videoAndSuggestionWrapper{
+        flex-direction: column;
+    }
+    .suggestionListWrapper{
+        width:100%;
+        margin-top:20px;
+        padding-left:2%;
+    }
+    .mainVideoPlayer{
+        width:100%;
+    }
+    .videoSuggestionCard{
+        padding:0px;
+    }
+    
 }
 
 @media screen and (max-width:700px) {
     .videoSuggestionCard{
         flex-direction: column;
     }
-    .contentBody::-webkit-scrollbar{
-        width: 0px;
-    }
-    .contentBody::-webkit-scrollbar-thumb{
-        display: none;
-        padding:0px;
-        width:0px;
-        margin:0px;
-    }
 }
 
 .videoSuggestionCard-title{
-    font-family: 'Roboto' , 'Courier New', Courier, monospace;
     font-weight: 500;
+    font-size: 14px;
 }
 .videoSuggestionCard-text{
     color:gray;
     font-weight: 500;
+    font-size: 12px;
+
 }
 
 .videoDescription{

@@ -1,5 +1,5 @@
 
-import '../styles/Tags.css';
+import './Tags.css';
 import {tags} from '../MockData/tagsData';
 
 

@@ -9,45 +9,43 @@ import { uploadedTime } from '../../Utils/dateTimeHelper';
 const MainVideoInfo = ({selectedVideo}) => {
     return (
         <div className="selectedVideoInfo">
-        <h4>{selectedVideo?.snippet?.title||'Loading...'}</h4>
-        <div style={{display:'flex', marginTop:'15px'}}>
+        <p className='videoTitle'>{selectedVideo?.snippet?.title||'Loading...'}</p>
+        <div className='videoStats' style={{}}>
         
-        <div className='container p-0'>
-        <div className='row'>
-            <div className='col-12 col-md-5' style={{display:'flex'}}>
+        <div  style={{display:'flex'}}>
                 <img 
-                    style={{width:'50px', marginRight:'15px', height:'50px', borderRadius:'50%', backgroundColor:'lightgray'}} 
+                    style={{width:'40px', marginRight:'15px', height:'40px', borderRadius:'50%', backgroundColor:'lightgray'}} 
                     src={'https://robohash.org/RQH.png?set=set3'} alt='Channel Image' 
                 />
                 <div style={{marginRight:'30px'}}>
-                    <div className='videoTitle'>{selectedVideo?.snippet?.channelTitle||'Loading...'}</div>
-                    <div>{formatNumber(selectedVideo?.statistics?.viewCount)} subscribers</div>
+                    <div className='channelTitle'>{selectedVideo?.snippet?.channelTitle||'Loading...'}</div>
+                    <div style={{fontSize:'12px'}}>{formatNumber(selectedVideo?.statistics?.viewCount)} subscribers</div>
                 </div>
                 <button className='subscribeButton'>Subscribe</button>
-            </div>
+        </div>
 
-            <div className='col-12 col-md-7 text-end p-0 px-2 px-md-5' style={{marginLeft:'auto',}}>
+        <div className='text-end p-0' style={{ display:'flex', justifyContent:'flex-end'}}>
                 <button className='otherButton'> 
-                    <img src={like} className='otherButton-icon d-none d-sm-inline'/>{formatNumber(selectedVideo?.statistics?.likeCount)} 
+                    <img src={like}  className='otherButton-icon d-none d-sm-block'/> 
+                    <div>{formatNumber(selectedVideo?.statistics?.likeCount)}</div>
+                    <img src={like} className='otherButton-icon d-none d-sm-block dislike'/>
                 </button>
                 <button className='otherButton'>
-                    <img src={share} className=' d-none d-sm-inline otherButton-icon'/>
+                    <img src={share} className=' d-none d-sm-block otherButton-icon'/>
                     Share
                 </button>
                 <button className='otherButton'>
-                <img src={download} className='otherButton-icon d-none d-sm-inline'/>
+                <img src={download} className='otherButton-icon d-none d-sm-block'/>
                     Download
                 </button>
-            </div>
-        </div>
         </div>
 
         </div>
         <div style={{height:'1px',background:'lightgray',marginTop:'15px'}}></div>
         <div className='videoDescription'>
-            <div style={{display:'flex'}}>
-                <h5 style={{marginRight:'10px'}}>{formatNumber(selectedVideo?.statistics?.viewCount)}</h5>
-                <h5>{uploadedTime(selectedVideo?.snippet?.publishedAt)}</h5>
+            <div style={{display:'flex',fontSize:'16px',fontWeight:'500'}}>
+                <div style={{marginRight:'10px'}}>{formatNumber(selectedVideo?.statistics?.viewCount)}</div>
+                <div>{uploadedTime(selectedVideo?.snippet?.publishedAt)}</div>
             </div>
             <p>{selectedVideo?.snippet?.localized?.description}</p>
         </div>

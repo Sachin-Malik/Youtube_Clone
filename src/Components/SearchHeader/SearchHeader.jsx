@@ -1,4 +1,4 @@
-import '../../styles/searchHeader.css'
+import './searchHeader.css'
 import menu from '../../assets/icons/menu.png';
 import notification from '../../assets/icons/notification.png'
 import trend from '../../assets/more/trend.png';
@@ -91,11 +91,11 @@ const SearchHeader = () => {
         <div className="search__header-left col-4 col-md-3">
             <img onClick={handleSideNavToggle} className='menuIcon' src={menu} alt='Get Menu'/>
             <div onClick={()=>{handleHomeClick()}} style={{display:'flex', cursor:'pointer'}}>
-                <img style={{height:'40px', width:'40px', marginRight:'5px'}} src={youtube} alt='YouTube Logo'/>
+                <img style={{height:'30px', width:'30px', marginRight:'5px'}} src={youtube} alt='YouTube Logo'/>
                 <span className='d-none d-md-block search_header-youtubeText'>YouTube</span>
             </div>
         </div>
-        <div className="search__header-middle col-9 col-md-5">
+        <div className="search__header-middle col-7 col-md-5">
             <div className='search__header-inputWrapper'>
                 <form onSubmit={(e)=>{handleSearchSubmit(e)}} style={{width:'100%'}}>
                     <input onBlur={()=>handleInputBlur()} onFocus={()=>{setShowPreviousSearch(true)}}  spellCheck='false' value={inputValue} onChange={(e)=>{handleIputChange(e)}} class="search__header-input" placeholder='Search' type='text' />
