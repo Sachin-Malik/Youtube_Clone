@@ -1,0 +1,16 @@
+.main__body{
+    display: flex;
+    margin-top:5px;
+    width:100%;
+}
+
+.contentBody::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 20px 20px #CCCCCC;
+    border-radius: 20px;
+    height: 56px;
+
+}
+
+.contentBody::-webkit-scrollbar{
+    width: 10px;
+}

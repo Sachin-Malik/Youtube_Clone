@@ -1,0 +1,79 @@
+.selectedVideoInfo{
+    margin-top:15px;
+    /* padding:0px 20px; */
+    /* background-color: red; */
+}
+
+.subscribeButton{
+    color:#ffffff;
+    font-weight: 500;
+    max-height: 44px;
+    padding:5px 10px;
+    background-color: #000;
+    border-radius: 25%;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.otherButton{
+    color:#000;
+    font-weight: 500;
+    background-color: rgba(219, 219, 219, 0.4);
+    border-radius: 25%;
+    border: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    margin-left:10px;
+    border-radius: 24px;
+}
+
+.otherButton:hover{
+    background-color: rgba(219, 219, 219, 1);
+    cursor: pointer;
+}
+
+.otherButton-icon{
+    height:25px;
+    width:25px;
+    margin-right:10px
+}
+
+.videoDescription{
+    padding:20px;
+    border-radius:10px;
+    margin-top:20px;
+    background-color: rgba(219, 219, 219, 0.4);
+
+
+}
+
+.alert{
+    display: flex;
+    background-color: #E4A11B; 
+    color: #fff;
+}
+
+.closeAlertButton{
+    color: #fff;
+    font-weight: 600;
+    margin-left:auto;
+    border:none;
+    background:transparent;
+}
+
+.videoTitle{
+    font-weight:500;
+    font-size:18px;
+    font-family: 'Roboto' , 'Courier New', Courier, monospace;
+
+}

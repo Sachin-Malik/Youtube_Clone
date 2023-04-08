@@ -1,0 +1,46 @@
+
+
+.sideNavContainer{
+    display:flex;
+    flex-direction:column;
+    padding:0% 6% ;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.sideNavContainer::-webkit-scrollbar-thumb{
+    box-shadow: inset 0 0 20px 20px #CCCCCC;
+    border-radius: 20px;
+    height: 56px;
+}
+
+.sideNavContainer::-webkit-scrollbar{
+    width: 0px;
+}
+.sideNavContainer:hover::-webkit-scrollbar{
+    width: 8px;
+}
+
+
+.itemWrapper{
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size:20px;
+    margin:0px 0px;
+    padding:10px;
+    border-radius:10px;
+
+}
+
+.itemWrapper:hover{
+    cursor: pointer;
+    background-color: rgba(219, 219, 219, 0.4);
+}
+
+.sideNavHeader{
+    font-weight: 500;
+    font-size: 20px;
+    margin-left:20px;
+}

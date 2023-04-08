@@ -1,0 +1,27 @@
+
+.tagContainer{
+    display: flex;
+    flex-wrap: nowrap;
+    width:95%;
+    overflow:auto;
+}
+
+.tagContainer::-webkit-scrollbar{
+    width: 0px;
+}
+
+.tag{
+    display:inline-block;
+    margin:10px;
+    padding:8px 10px;
+    background-color: rgba(219, 219, 219, 0.4);
+    border-radius: 10px;
+    font-weight: 400;
+    font-family: 'Roboto' , 'Courier New', Courier, monospace;
+
+    white-space: nowrap;
+}
+.tag:hover{
+    background-color: rgba(219, 219, 219, 1);
+    cursor: pointer;
+}
